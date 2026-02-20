@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="midia/mobi.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style-home.css">
+    <link rel="stylesheet" href="https://use.typekit.net/htb2smi.css">
+    <link href="https://db.onlinewebfonts.com/c/2bf16335573007d828f4197c2b884c04?family=Satoshi" rel="stylesheet">
+    <title>Home Mobi Comunicação</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="home.html"><img src="midia/mobi-logo-reduzida.png" alt="logo-mobicomunicacao"></a>
+        </div>
+
+        <nav class="nav-bar">
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#services">Nossos Serviços</a>
+            <a href="#clients">Nossos clientes</a>
+            <a href="#quotes">Depoimentos</a>
+            <a href="blog.html">Blog</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <video class="hero-video" autoplay loop playsinline preload="metadata">
+            <source src="midia/MOBI_2.mp4" type="video/mp4" />
+        </video>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="img-section blob-media" aria-label="Equipe panfletadora">
+            <svg class="blob" viewBox="0 0 600 600" role="img" aria-hidden="true">
+                <defs>
+                    <clipPath id="clipBlobAbout">
+                        <path
+                            d="M433,86 C499,147 547,238 523,322 C498,406 402,483 302,514 C203,545 101,529 71,447 C41,366 83,219 166,132 C250,45 367,25 433,86 Z" />
+                    </clipPath>
+
+                    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+                    </filter>
+                </defs>
+
+                <!-- Blob atrás -->
+                <path class="back-blob" transform="translate(18 -10) scale(1.16)"
+                    d="M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z">
+                    <animate attributeName="d" dur="3.5s" repeatCount="indefinite" calcMode="spline"
+                        keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1" values="
+        M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z;
+        M472,126 C525,205 536,284 498,362 C460,440 378,493 292,512 C206,531 109,520 76,446 C43,372 60,241 155,156 C250,71 419,47 472,126 Z;
+        M440,90 C503,140 560,235 536,324 C512,413 407,504 305,532 C204,559 100,522 76,439 C51,355 90,224 170,138 C250,52 377,40 440,90 Z;
+        M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z
+        " />
+                </path>
+
+                <!-- Imagem recortada -->
+                <image href="midia/image-section-about.png" x="60" y="40" width="700" height="500"
+                    preserveAspectRatio="xMidYMid slice" clip-path="url(#clipBlobAbout)" />
+            </svg>
+        </div>
+
+
+        <div class="content">
+            <h1>QUEM É A MOBI</h1>
+
+            <p>
+                Em um mercado cada vez mais digital, a MOBI reafirma o poder transformador do contato direto e da
+                presença física para marcas que buscam conexão genuína. Nascemos com a missão de movimentar sua marca
+                para o lugar certo: o coração e a mente do consumidor, através de estratégias especializadas em
+                panfletagem e organização de eventos para supermercados e comércios locais.
+
+                Acreditamos que o olho no olho, a entrega de um folheto e a experiência ao vivo são ferramentas
+                insubstituíveis para criar laços verdadeiros e gerar resultados reais. Não entregamos apenas serviços;
+                entregamos visibilidade, impacto e retorno, levando sua marca com estratégia, criatividade e eficiência
+                até onde seu cliente realmente está.
+            </p>
+
+            <div class="btn"><a href="sobre-nos.html">Saiba mais</a></div>
+        </div>
+    </section>
+
+   <section id="services" class="tc-mentors">
+  <div class="tc-wrap">
+    <div class="tc-left">
+      <p class="tc-kicker">CONHEÇA NOSSOS</p>
+      <h2 class="tc-title">SERVIÇOS</h2>
+
+      <div class="tc-info">
+        <h3 class="tc-name" id="tcName">Panfletagem Estratégica e Distribuição Inteligente</h3>
+        <p class="tc-desc" id="tcDesc">
+          entrega de panfletos com precisão e foco no seu público-alvo
+        </p>
+
+        <a class="tc-cta" id="tcCta" href="#" aria-label="Abrir serviço">
+          Quero esse serviço
+        </a>
+      </div>
+
+      <div class="tc-controls">
+        <button class="tc-nav" id="tcPrev" type="button" aria-label="Anterior">‹</button>
+        <div class="tc-dots" id="tcDots" aria-label="Paginação"></div>
+        <button class="tc-nav" id="tcNext" type="button" aria-label="Próximo">›</button>
+      </div>
+    </div>
+
+    <div class="tc-right">
+      <div class="tc-viewport" id="tcViewport">
+        <div class="tc-track" id="tcTrack"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="parceiros">
+  <!-- Slider top -->
+  <div class="logos" id="clients">
+    <div class="logos-track">
+      <div class="logos-row">
+        <img src="midia/logo-parceiros/baliza-logo.svg" alt="Baliza">
+        <img src="midia/logo-parceiros/logo-municipio-de-ivoti.svg" alt="Município de Ivoti">
+        <img class="logo-sky" src="midia/logo-parceiros/sky-logo.svg" alt="Sky">
+        <img src="midia/logo-parceiros/va-logo.svg" alt="VA">
+        <img src="midia/logo-parceiros/vida-vida-logo.svg" alt="Viva Vida">
+        <img class="logo-color" src="midia/logo-parceiros/viezzer-logo.svg" alt="Viezzer">
+      </div>
+
+      <div class="logos-row" aria-hidden="true">
+        <img src="midia/logo-parceiros/baliza-logo.svg" alt="">
+        <img src="midia/logo-parceiros/logo-municipio-de-ivoti.svg" alt="">
+        <img class="logo-sky" src="midia/logo-parceiros/sky-logo.svg" alt="">
+        <img src="midia/logo-parceiros/va-logo.svg" alt="">
+        <img src="midia/logo-parceiros/vida-vida-logo.svg" alt="">
+        <img class="logo-color" src="midia/logo-parceiros/viezzer-logo.svg" alt="">
+      </div>
+
+      <div class="logos-row" aria-hidden="true">
+        <img src="midia/logo-parceiros/baliza-logo.svg" alt="">
+        <img src="midia/logo-parceiros/logo-municipio-de-ivoti.svg" alt="">
+        <img class="logo-sky" src="midia/logo-parceiros/sky-logo.svg" alt="">
+        <img src="midia/logo-parceiros/va-logo.svg" alt="">
+        <img src="midia/logo-parceiros/vida-vida-logo.svg" alt="">
+        <img class="logo-color" src="midia/logo-parceiros/viezzer-logo.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="clients-content">
+    <div class="title">
+      <h2>Nossos<br>Clientes</h2>
+    </div>
+
+    <div class="clients-text">
+      <p>
+        A MOBI constrói parcerias sólidas com supermercados e comércios locais, focando na entrega de resultados
+        tangíveis através da presença estratégica. A empresa oferece mais do que um serviço; ela proporciona
+        planejamento, cuidado e uma equipe dedicada que garante que a visibilidade da marca não seja deixada ao acaso.
+      </p>
+
+      <p>
+        Os resultados comprovam seu valor, gerando engajamento, movimento e conversão. Cada projeto é tratado como
+        único e cada cliente, como prioridade.
+      </p>
+    </div>
+  </div>
+
+  <!-- Slider bottom -->
+  <div class="logos logos-bottom">
+    <div class="logos-track is-reverse">
+      <div class="logos-row">
+        <img src="midia/logo-parceiros/baliza-logo.svg" alt="Baliza">
+        <img src="midia/logo-parceiros/logo-municipio-de-ivoti.svg" alt="Município de Ivoti">
+        <img class="logo-sky" src="midia/logo-parceiros/sky-logo.svg" alt="Sky">
+        <img src="midia/logo-parceiros/va-logo.svg" alt="VA">
+        <img src="midia/logo-parceiros/vida-vida-logo.svg" alt="Viva Vida">
+        <img class="logo-color" src="midia/logo-parceiros/viezzer-logo.svg" alt="Viezzer">
+      </div>
+
+      <div class="logos-row" aria-hidden="true">
+        <img src="midia/logo-parceiros/baliza-logo.svg" alt="">
+        <img src="midia/logo-parceiros/logo-municipio-de-ivoti.svg" alt="">
+        <img class="logo-sky" src="midia/logo-parceiros/sky-logo.svg" alt="">
+        <img src="midia/logo-parceiros/va-logo.svg" alt="">
+        <img src="midia/logo-parceiros/vida-vida-logo.svg" alt="">
+        <img class="logo-color" src="midia/logo-parceiros/viezzer-logo.svg" alt="">
+      </div>
+
+      <div class="logos-row" aria-hidden="true">
+        <img src="midia/logo-parceiros/baliza-logo.svg" alt="">
+        <img src="midia/logo-parceiros/logo-municipio-de-ivoti.svg" alt="">
+        <img class="logo-sky" src="midia/logo-parceiros/sky-logo.svg" alt="">
+        <img src="midia/logo-parceiros/va-logo.svg" alt="">
+        <img src="midia/logo-parceiros/vida-vida-logo.svg" alt="">
+        <img class="logo-color" src="midia/logo-parceiros/viezzer-logo.svg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes-section" id="quotes">
+  <div class="quotes-content">
+    <h2>Depoimentos dos nossos clientes</h2>
+    <p>Veja o que as pessoas tem falado da Mobi Comunicação.</p>
+  </div>
+
+  <div class="quotes-carousel">
+    <button class="quote-nav prev" type="button" aria-label="Depoimento anterior">
+      ‹
+    </button>
+
+    <div class="quote-viewport">
+      <div class="quote-track">
+        <div class="card active">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Luís</h3>
+          <p class="quote-tag">Subgerente de Supermercado</p>
+          <p class="quote-content">O atendimento está sendo bom, com equipe comprometida. Não tivemos reclamações — os clientes recebem os encartes e vêm conferir as promoções na loja. O movimento tem evoluído nos dias de distribuição. Tem cliente que não conhecia a loja e passou a comprar, aproveitando as promoções. É um trabalho em conjunto que está dando ótimos resultados.</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Elisangela</h3>
+          <p class="quote-tag">Viezzer Supermercados</p>
+          <p class="quote-content">Foi um ótimo trabalho! Tudo que solicitamos foi atendido. Sempre que tivemos distribuição, tivemos resultados positivos, trazendo clientes alcançados diretamente pela ação.</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Morgana Simon</h3>
+          <p class="quote-tag"></p>
+          <p class="quote-content">Fomos muito bem atendidos do início ao fim da ação realizada para uma empresa multinacional com filial em Sapucaia do Sul. A experiência superou nossas expectativas, com uma execução impecável e um atendimento atencioso. Sem dúvida, recomendamos o trabalho e a parceria!
+</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Amanda</h3>
+          <p class="quote-tag">Super Kern</p>
+          <p class="quote-content">A gente nunca tinha trabalhado com algo tão profissional quando se trata de panfletagem. O que vocês entregaram foi completamente diferente. O material veio com fotos, tudo muito organizado. Normalmente, a gente só percebe se a panfletagem funcionou quando o cliente reclama — e não quando elogia. Mas, com vocês, não tivemos nenhuma reclamação. Isso já mostra muito.
+</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Lucas</h3>
+          <p class="quote-tag">Viva Bem Supermercados</p>
+          <p class="quote-content">Estamos muito satisfeitos com a parceria. O crescimento nas vendas nos dias de ação é visível: a loja fica cheia e os resultados são perceptíveis. O suporte da MOBI e as sugestões de ajustes fazem toda a diferença para ampliar nosso alcance. Um diferencial importante é o controle em tempo real sobre onde o material está sendo veiculado — algo raro no mercado, que contribui diretamente para melhorias e decisões estratégicas.
+</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Diogenes Borges</h3>
+          <p class="quote-tag"></p>
+          <p class="quote-content">Tivemos uma experiência excelente! O atendimento foi ágil, atencioso e extremamente prestativo. Um destaque especial vai para o sistema de monitoramento em tempo real, que garante mais controle e transparência durante toda a ação. Recomendamos com confiança!
+</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Aldonei Severo</h3>
+          <p class="quote-tag"></p>
+          <p class="quote-content">Equipe extremamente profissional! Além de executarem o serviço contratado com excelência, ainda realizaram postagens no Instagram e me mantiveram informado em cada etapa, compartilhando todo o material divulgado. Um cuidado que faz toda a diferença!
+</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Michel Alves</h3>
+          <p class="quote-tag"></p>
+          <p class="quote-content">Tive uma ótima experiência com a equipe — entrega pontual e muito profissionalismo por parte dos colaboradores. Parabéns pelo trabalho! Recomendo com certeza.
+</p>
+        </div>
+
+        <div class="card">
+          <img class="quote-icon" src="midia/quote-icon.png" alt="quote-icon">
+          <h3 class="nome">Catiussa Moro</h3>
+          <p class="quote-tag"></p>
+          <p class="quote-content">Resultado imediato! Um trabalho excelente, com entrega rápida e eficiente. Superou as expectativas!
+</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="quote-nav next" type="button" aria-label="Próximo depoimento">
+      ›
+    </button>
+  </div>
+</section>
+
+    <script>
+        const header = document.querySelector(".header");
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("scrolled", window.scrollY > 10);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#app'),
+            smooth: true,
+        });
+    </script>
+    <script src="script/carrosel.js"></script>
+    <script src="script/quote-carrosel.js"></script>
+</body>
+
+</html>
