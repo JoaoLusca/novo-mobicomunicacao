@@ -35,7 +35,7 @@
 
   const prevBtn = document.getElementById("tcPrev");
   const nextBtn = document.getElementById("tcNext");
-  const section = document.querySelector(".tc-mentors");
+  const section = document.getElementById("services"); // aqui
 
   if (!track || !viewport || !nameEl || !descEl || !ctaEl || !dotsEl || !prevBtn || !nextBtn || !section) {
     console.warn("[carrosel.js] Elementos não encontrados. Verifique IDs/classes do HTML.");

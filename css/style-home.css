@@ -17,6 +17,12 @@ body {
   width: 100%;
 }
 
+h1,
+h2,
+h3, h4 {
+  font-family: "bebas-neue", sans-serif;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -178,98 +184,41 @@ body {
     height: 50px;
 
     & a {
-      position: absolute;
-      top: 0;
-      Left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
+      display: inline-flex;
       align-items: center;
-      background: rgba(243, 118, 0, 0.10);
-      /* leve laranja */
-      border: 1px solid rgba(206, 105, 10, 0.35);
-      /* contorno */
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
-      /* profundidade */
-      border-top: 1px solid ☐ rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
+      justify-content: center;
+
+      height: 48px;
+      padding: 0 22px;
+
+      border-radius: 999px;
+      cursor: pointer;
+
+      font-family: "Satoshi", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+
       color: #111;
-      z-index: 1;
-      font-weight: 400;
-      Letter-spacing: 1px;
-      text-decoration: none;
-      transition: 0.5s;
-      overflow: hidden;
-      backdrop-filter: blur(10px);
+
+      background: rgba(255, 115, 0, 0.30);
+      border: 1px solid rgba(255, 115, 0, 0.88);
+
+      box-shadow: 0 0 0 0 rgba(255, 115, 0, 0);
+      transition:
+        transform 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease;
     }
 
     & a:hover {
-      Letter-spacing: 3px;
-      color: #fff;
-      transition-delay: 0.5s;
+      transform: translateY(-1px);
+      background: rgba(255, 115, 0, 0.40);
+      box-shadow: 0 0 22px rgba(255, 115, 0, 0.25);
     }
 
-    & a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(to right,
-          transparent,
-          rgba(255, 255, 255, 1),
-          transparent);
-      transform: skewX(45deg) translateX(0);
-      transition: 0.5s;
-      z-index: -1;
-    }
   }
 
-  & .btn::after {
-    content: '';
-    position: absolute;
-    Left: 50%;
-    transform: translateX(-50%);
-    top: -5px;
-    width: 30px;
-    height: 10px;
-    background: #F37600;
-    border-radius: 10px;
-    transition: 0.5s;
-    transition-delay: 0s;
-  }
 
-  & .btn:hover::after {
-    top: 0;
-    height: 50%;
-    width: 90%;
-    border-radius: 30px;
-    transition-delay: 0.5s;
-  }
-
-  & .btn::before {
-    content: '';
-    position: absolute;
-    Left: 50%;
-    transform: translateX(-50%);
-    bottom: -5px;
-    width: 30px;
-    height: 10px;
-    background: #F37600;
-    border-radius: 10px;
-    transition: 0.5s;
-    transition-delay: 0s;
-  }
-
-  & .btn:hover::before {
-    bottom: 0;
-    height: 50%;
-    width: 90%;
-    border-radius: 30px;
-    transition-delay: 0.5s;
-  }
 
   & .btn:hover a::before {
     transform: skewX(45deg) translateX(200%);
@@ -285,121 +234,147 @@ body {
 }
 
 
-/*SEÇÃO DE SERVIÇOS*/
-.tc-mentors {
-  padding: 90px 24px;
+/* =========================
+   SERVICES SECTION (Carrossel)
+   Objetivo: seção mais larga + cards maiores + CSS legível
+   ========================= */
+
+.services {
   position: relative;
   overflow: hidden;
+  padding: 110px 24px;
+  /* mais alto que antes */
   color: #eaf7f2;
-  background: radial-gradient(1200px 700px at 20% 50%, rgba(255, 123, 0, 0.1), transparent 60%),
-    radial-gradient(900px 600px at 75% 40%, rgba(255, 136, 0, 0.06), transparent 55%),
+
+  /* Fundo cinematográfico em camadas */
+  background:
+    radial-gradient(1400px 800px at 18% 50%, rgba(255, 123, 0, 0.12), transparent 60%),
+    radial-gradient(1100px 700px at 78% 40%, rgba(255, 136, 0, 0.08), transparent 60%),
     linear-gradient(180deg, #150a03 0%, #1b0b04 100%);
 }
 
-.tc-mentors::before {
+.services::before {
   content: "";
   position: absolute;
-  inset: -200px;
-  background: radial-gradient(700px 500px at 30% 55%, rgba(255, 115, 0, 0.12), transparent 60%);
-  filter: blur(30px);
+  inset: -220px;
+  background: radial-gradient(900px 650px at 30% 55%, rgba(255, 115, 0, 0.14), transparent 60%);
+  filter: blur(34px);
   pointer-events: none;
 }
 
-.tc-wrap {
-  max-width: 1200px;
+/* Container principal, agora mais largo */
+.services__container {
+  max-width: 1320px;
+  /* antes 1200px */
   margin: 0 auto;
+
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 40px;
+  grid-template-columns: 460px 1fr;
+  /* coluna esquerda maior */
+  gap: 56px;
+
   align-items: center;
   position: relative;
   z-index: 1;
 }
 
-.tc-kicker {
+/* ===== Coluna esquerda (texto) ===== */
+.services__kicker {
   font-size: 14px;
   letter-spacing: 0.22em;
   opacity: 0.85;
   margin-bottom: 10px;
 }
 
-.tc-title {
-  font-size: 4rem;
-  margin-bottom: 26px;
+.services__title {
   font-family: "bebas-neue", sans-serif;
   font-weight: 800;
   letter-spacing: 0.06em;
+
+  font-size: clamp(3.6rem, 4.8vw, 5.2rem);
+  line-height: 0.95;
+  margin-bottom: 28px;
 }
 
-.tc-info {
-  max-width: 340px;
+.services__details {
+  max-width: 420px;
+  /* mais confortável */
 }
 
-.tc-name {
-  font-size: 1rem;
+.services__name {
+  font-size: 1.05rem;
   letter-spacing: 0.04em;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
 
-.tc-desc {
-  font-size: 14px;
-  line-height: 1.55;
-  opacity: 0.85;
+.services__desc {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.86;
   margin-bottom: 18px;
 }
 
-.tc-cta {
+/* CTA no mesmo estilo do “Quero esse serviço” */
+.services__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 42px;
-  padding: 0 16px;
+
+  height: 46px;
+  padding: 0 18px;
   border-radius: 999px;
+
   color: #dffdf4;
   text-decoration: none;
+
   border: 1px solid rgba(255, 115, 0, 0.38);
   background: rgba(255, 136, 0, 0.08);
-  box-shadow: 0 0 0 0 rgba(0, 255, 187, 0.0);
+
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-.tc-cta:hover {
+.services__cta:hover {
   transform: translateY(-1px);
   background: rgba(255, 115, 0, 0.12);
   box-shadow: 0 0 22px rgba(255, 102, 0, 0.18);
 }
 
-.tc-controls {
-  margin-top: 22px;
+/* Controles (setas + dots) */
+.services__controls {
+  margin-top: 26px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.tc-nav {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+.services__nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
   cursor: pointer;
+
   color: #dffdf4;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.10);
+
   transition: transform 160ms ease, background 160ms ease;
 }
 
-.tc-nav:hover {
+.services__nav:hover {
   transform: translateY(-1px);
   background: rgba(255, 255, 255, 0.10);
 }
 
-.tc-dots {
+.services__dots {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.tc-dot {
+/* Mantém compatível com seus dots atuais (tc-dot) se o JS cria eles */
+.services__dots .tc-dot,
+.services__dots .services__dot {
   width: 7px;
   height: 7px;
   border-radius: 999px;
@@ -408,38 +383,49 @@ body {
   cursor: pointer;
 }
 
-.tc-dot.is-active {
+.services__dots .tc-dot.is-active,
+.services__dots .services__dot.is-active {
   width: 18px;
   background: rgba(255, 102, 0, 0.75);
 }
 
-.tc-right {
+/* ===== Coluna direita (carrossel) ===== */
+.services__carousel {
   position: relative;
 }
 
-.tc-viewport {
+/* viewport maior para as fotos “respirarem” */
+.services__viewport {
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 460px;
+  /* antes 360px */
   overflow: hidden;
 }
 
-.tc-track {
+/* trilho centralizado verticalmente */
+.services__track {
   position: absolute;
   left: 0;
   top: 50%;
   transform: translate3d(0, -50%, 0);
+
   display: flex;
-  gap: 18px;
+  gap: 22px;
+  padding: 0 24px;
+
   will-change: transform;
   transition: transform 520ms cubic-bezier(0.2, 0.9, 0.2, 1);
-  padding: 0 20px;
 }
 
+/* Card maior */
 .tc-card {
-  width: 250px;
-  height: 320px;
-  border-radius: 14px;
+  width: 320px;
+  /* antes 250px */
+  height: 410px;
+  /* antes 320px */
+  border-radius: 18px;
+
   overflow: hidden;
   position: relative;
   flex: 0 0 auto;
@@ -449,18 +435,18 @@ body {
   opacity: 0.28;
 
   filter: grayscale(100%) saturate(0.4) brightness(0.8);
-
   transition:
     transform 520ms cubic-bezier(0.2, 0.9, 0.2, 1),
     opacity 520ms cubic-bezier(0.2, 0.9, 0.2, 1),
     filter 520ms cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 
+/* overlay escuro no fundo para texto legível */
 .tc-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.68) 100%);
   pointer-events: none;
 }
 
@@ -473,9 +459,9 @@ body {
 
 .tc-card .tc-card-meta {
   position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
   z-index: 2;
 }
 
@@ -488,24 +474,79 @@ body {
 
 .tc-card .tc-card-sub {
   font-size: 14px;
-  color: inherit;
   opacity: 1;
 }
 
+/* estado ativo e vizinhos */
 .tc-card.is-active {
   transform: scale(1);
   opacity: 1;
-
   filter: grayscale(0%) saturate(1) brightness(1);
 
   border: 1px solid rgba(255, 102, 0, 0.35);
-  box-shadow: 0 0 34px rgba(255, 136, 0, 0.16);
+  box-shadow: 0 0 34px rgba(255, 136, 0, 0.18);
 }
 
 .tc-card.is-near {
-  transform: scale(0.94);
-  opacity: 0.6;
+  transform: scale(0.95);
+  opacity: 0.62;
   filter: grayscale(60%) saturate(0.6) brightness(0.9);
+}
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .services {
+    padding: 90px 20px;
+  }
+
+  .services__container {
+    max-width: 980px;
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .services__details {
+    max-width: 640px;
+  }
+
+  .services__viewport {
+    height: 420px;
+  }
+
+  .tc-card {
+    width: 300px;
+    height: 390px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .services {
+    padding: 76px 16px;
+  }
+
+  .services__title {
+    font-size: clamp(3rem, 11vw, 4rem);
+  }
+
+  .services__viewport {
+    height: 380px;
+  }
+
+  .tc-card {
+    width: 260px;
+    height: 340px;
+    border-radius: 16px;
+  }
+
+  .services__nav {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -891,34 +932,36 @@ body {
   color: #1f1f1f;
 }
 
-@media (max-width: 560px){
+@media (max-width: 560px) {
+
   /* seção em 1 coluna */
-  .quotes-section{
+  .quotes-section {
     grid-template-columns: 1fr;
     padding: 56px 5vw;
     gap: 22px;
   }
 
   /* carrossel vira 1 coluna, setas em overlay */
-  .quotes-carousel{
+  .quotes-carousel {
     display: block;
     position: relative;
   }
 
-  .quote-viewport{
+  .quote-viewport {
     width: 100%;
-    height: 360px; /* ajuste se quiser mais alto */
+    height: 360px;
+    /* ajuste se quiser mais alto */
     overflow: hidden;
   }
 
   /* remove o fade lateral (opcional, mas ajuda no mobile) */
   .quote-viewport::before,
-  .quote-viewport::after{
+  .quote-viewport::after {
     display: none;
   }
 
   /* setas por cima do viewport, centralizadas verticalmente */
-  .quote-nav{
+  .quote-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -926,23 +969,281 @@ body {
     width: 44px;
     height: 44px;
     font-size: 26px;
-    background: rgba(255,255,255,0.85); /* garante contraste */
+    background: rgba(255, 255, 255, 0.85);
+    /* garante contraste */
     backdrop-filter: blur(6px);
   }
 
-  .quote-nav.prev{ left: 10px; }
-  .quote-nav.next{ right: 10px; }
+  .quote-nav.prev {
+    left: 10px;
+  }
+
+  .quote-nav.next {
+    right: 10px;
+  }
 
   /* card central ocupa mais largura */
-  .quote-track .card{
-    width: calc(100% - 120px); /* deixa espaço visual para as setas */
+  .quote-track .card {
+    width: calc(100% - 120px);
+    /* deixa espaço visual para as setas */
     padding: 22px;
   }
 
   /* no mobile fica só 1 card mesmo */
   .quote-track .card.is-prev,
-  .quote-track .card.is-next{
+  .quote-track .card.is-next {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+/* SEÇÃO DE FORMULÁRIOS*/
+
+.contact-forms {
+  display: flex;
+  height: 620px;
+  gap: 1rem;
+  padding: 3rem;
+  align-content: center;
+
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 600px at 20% 50%,
+      rgba(255, 120, 0, 0.25),
+      transparent 60%),
+    radial-gradient(700px 500px at 80% 40%,
+      rgba(255, 80, 0, 0.18),
+      transparent 60%),
+    linear-gradient(180deg,
+      #140601 0%,
+      #1a0702 50%,
+      #0e0401 100%);
+
+}
+
+.contact-forms .contact-content {
+  padding: 6rem 2rem 2rem 2rem;
+  width: 50%;
+
+
+  & h2 {
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+
+  & .content-tag {
+    text-align: justify;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  & p {
+    text-align: justify;
+    color: #FFFFFF;
+  }
+}
+
+.contact-forms .forms {
+  border: 1px solid #F37600;
+  border-radius: 30px;
+  padding: 2rem;
+  width: 50%;
+  border: 1px solid rgba(255, 115, 0, 0.38);
+  background: rgba(255, 115, 0, 0.10);
+  box-shadow: 0 0 0 0 rgba(255, 115, 0, 0);
+  align-items: center;
+  align-content: center;
+}
+
+
+.contact-forms .forms form {
+  display: grid;
+  grid-template-columns: 1;
+
+  & label,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  & input,
+  textarea {
+    font: inherit;
+    font-size: 16px;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }
+
+  & textarea {
+    height: 100px;
+  }
+}
+
+.contact-forms .forms form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+
+  height: 48px;
+  padding: 0 22px;
+
+  border-radius: 999px;
+  cursor: pointer;
+
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #fff;
+
+  background: rgba(255, 115, 0, 0.10);
+  border: 1px solid rgba(255, 115, 0, 0.38);
+
+  box-shadow: 0 0 0 0 rgba(255, 115, 0, 0);
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.contact-forms .forms form button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 115, 0, 0.18);
+  box-shadow: 0 0 22px rgba(255, 115, 0, 0.25);
+}
+
+.contact-forms .forms form button:active {
+  transform: translateY(0);
+}
+
+/*
+=========================
+      FOOTER: sitemap, informações legais, serviços, contato
+=========================
+*/
+
+.rodape {
+  position: relative;
+  padding: 120px 6% 100px;
+  overflow: hidden;
+  background: radial-gradient(900px 600px at 20% 50%, rgba(255, 120, 0, 0.18), transparent 60%),
+    radial-gradient(700px 500px at 80% 40%, rgba(255, 80, 0, 0.12), transparent 60%),
+    linear-gradient(180deg, #0e0401 0%, #140601 50%, #0e0401 100%);
+}
+
+.rodape-container {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 80px;
+}
+.rodape-logo{
+  position: absolute;
+  left: 50%;
+  bottom: -120px;
+  transform: translateX(-50%);
+
+  width: min(1200px, 130vw);
+  opacity: 0.10;
+
+  filter: saturate(0) contrast(1.1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rodape-container{
+  position: relative;
+  z-index: 1;
+}
+.rodape-logo {
+  width: 80px;
+  margin-bottom: 28px;
+}
+
+.rodape-social {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.rodape-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 14px;
+
+  transition: all 0.25s ease;
+}
+
+.rodape-social a:hover {
+  background: rgba(255, 115, 0, 0.2);
+  border-color: rgba(255, 115, 0, 0.4);
+}
+
+.rodape-copy {
+  font-size: 14px;
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+.rodape-col h4 {
+  font-size: 15px;
+  margin-bottom: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.rodape-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rodape-col a {
+  font-size: 14px;
+  opacity: 0.65;
+  transition: opacity 0.25s ease;
+}
+
+.rodape-col a:hover {
+  opacity: 1;
+}
+
+/* ========================
+   RESPONSIVO
+======================== */
+
+@media (max-width: 980px) {
+  .rodape-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rodape {
+    padding: 80px 6%;
+  }
+
+  .rodape-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
