@@ -1,3 +1,17 @@
+/*
+  =============================================================
+  MOBI Comunicação | style-home.css
+  Organização aplicada:
+  - NÃO altera classes, seletores, estrutura nem regras
+  - Apenas padroniza identação/espaçamento e adiciona comentários
+  - Mantém a ordem geral dos blocos para evitar efeitos colaterais
+  =============================================================
+*/
+
+
+/* =========================================================
+   Base / Reset
+   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +37,10 @@ h3, h4 {
   font-family: "bebas-neue", sans-serif;
 }
 
+
+/* =========================================================
+   Header (menu fixo + efeito vidro no scroll)
+   ========================================================= */
 .header {
   position: fixed;
   top: 0;
@@ -72,6 +90,14 @@ h3, h4 {
   font-size: 20px;
 }
 
+/* Esconde o botão hambúrguer no desktop */
+.nav-toggle {
+  display: none;
+}
+
+/* =========================================================
+   Hero (vídeo de fundo)
+   ========================================================= */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -91,6 +117,10 @@ h3, h4 {
 }
 
 /* container da mÃ­dia */
+
+/* =========================================================
+   Blob / Media (SVG animado)
+   ========================================================= */
 .img-section.blob-media {
   width: min(420px, 90vw);
   aspect-ratio: 1 / 1;
@@ -118,13 +148,13 @@ h3, h4 {
     transform: translate(0px, 0px) scale(1);
   }
 
-  50% {
-    transform: translate(10px, -12px) scale(1.03);
-  }
+50% {
+  transform: translate(10px, -12px) scale(1.03);
+}
 
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+100% {
+  transform: translate(0px, 0px) scale(1);
+}
 }
 
 /* acessibilidade: reduz movimento */
@@ -133,11 +163,15 @@ h3, h4 {
     animation: none;
   }
 
-  .img-section.blob-media .back-blob animate {
-    display: none;
-  }
+.img-section.blob-media .back-blob animate {
+  display: none;
+}
 }
 
+
+/* =========================================================
+   Sobre
+   ========================================================= */
 .about {
   min-height: 500px;
   display: flex;
@@ -174,76 +208,77 @@ h3, h4 {
     margin-bottom: 10px;
   }
 
-  & p {
-    text-align: justify;
-    line-height: 1.5;
-    font-size: 18px;
-    font-weight: medium;
-    margin-bottom: 20px;
-    color: #111;
-  }
-
-  & .btn {
-    position: relative;
-    width: 155px;
-    height: 50px;
-
-    & a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      height: 48px;
-      padding: 0 22px;
-
-      border-radius: 999px;
-      cursor: pointer;
-
-      font-family: "Satoshi", sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-
-      color: #111;
-
-      background: rgba(255, 115, 0, 0.30);
-      border: 1px solid rgba(255, 115, 0, 0.88);
-
-      box-shadow: 0 0 0 0 rgba(255, 115, 0, 0);
-      transition:
-        transform 180ms ease,
-        background 180ms ease,
-        box-shadow 180ms ease;
-    }
-
-    & a:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 115, 0, 0.40);
-      box-shadow: 0 0 22px rgba(255, 115, 0, 0.25);
-    }
-
-  }
-
-
-
-  & .btn:hover a::before {
-    transform: skewX(45deg) translateX(200%);
-  }
-
-  & .btn::before,
-  .btn::after {
-    background: #F37600;
-    box-shadow: 0 0 5px #F37600,
-      0 0 15px #F37600,
-      0 0 30px #F37600;
-  }
+& p {
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: medium;
+  margin-bottom: 20px;
+  color: #111;
 }
 
+& .btn {
+  position: relative;
+  width: 155px;
+  height: 50px;
+
+  & a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 48px;
+    padding: 0 22px;
+
+    border-radius: 999px;
+    cursor: pointer;
+
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    color: #111;
+
+    background: rgba(255, 115, 0, 0.30);
+    border: 1px solid rgba(255, 115, 0, 0.88);
+
+    box-shadow: 0 0 0 0 rgba(255, 115, 0, 0);
+    transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+  }
+
+& a:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 115, 0, 0.40);
+  box-shadow: 0 0 22px rgba(255, 115, 0, 0.25);
+}
+
+}
+
+& .btn:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+& .btn::before,
+.btn::after {
+  background: #F37600;
+  box-shadow: 0 0 5px #F37600,
+  0 0 15px #F37600,
+  0 0 30px #F37600;
+}
+}
 
 /* =========================
-   SERVICES SECTION (Carrossel)
-   Objetivo: seÃ§Ã£o mais larga + cards maiores + CSS legÃ­vel
-   ========================= */
+SERVICES SECTION (Carrossel)
+Objetivo: seção mais larga + cards maiores + CSS legível
+========================= */
 
+
+/* =========================================================
+   Serviços (carrossel)
+   ========================================================= */
 .services {
   position: relative;
   overflow: hidden;
@@ -253,9 +288,9 @@ h3, h4 {
 
   /* Fundo cinematogrÃ¡fico em camadas */
   background:
-    radial-gradient(1400px 800px at 18% 50%, rgba(255, 123, 0, 0.12), transparent 60%),
-    radial-gradient(1100px 700px at 78% 40%, rgba(255, 136, 0, 0.08), transparent 60%),
-    linear-gradient(180deg, #150a03 0%, #1b0b04 100%);
+  radial-gradient(1400px 800px at 18% 50%, rgba(255, 123, 0, 0.12), transparent 60%),
+  radial-gradient(1100px 700px at 78% 40%, rgba(255, 136, 0, 0.08), transparent 60%),
+  linear-gradient(180deg, #150a03 0%, #1b0b04 100%);
 }
 
 .services::before {
@@ -320,7 +355,7 @@ h3, h4 {
   margin-bottom: 18px;
 }
 
-/* CTA no mesmo estilo do â€œQuero esse serviÃ§oâ€ */
+/* CTA no mesmo estilo do "Quero esse serviço" */
 .services__cta {
   display: inline-flex;
   align-items: center;
@@ -377,7 +412,7 @@ h3, h4 {
   gap: 8px;
 }
 
-/* MantÃ©m compatÃ­vel com seus dots atuais (tc-dot) se o JS cria eles */
+/* Mantém compatível com seus dots atuais (tc-dot) se o JS cria eles */
 .services__dots .tc-dot,
 .services__dots .services__dot {
   width: 7px;
@@ -399,7 +434,7 @@ h3, h4 {
   position: relative;
 }
 
-/* viewport maior para as fotos â€œrespiraremâ€ */
+/* viewport maior para as fotos "respirarem" */
 .services__viewport {
   position: relative;
   width: 100%;
@@ -441,12 +476,12 @@ h3, h4 {
 
   filter: grayscale(100%) saturate(0.4) brightness(0.8);
   transition:
-    transform 520ms cubic-bezier(0.2, 0.9, 0.2, 1),
-    opacity 520ms cubic-bezier(0.2, 0.9, 0.2, 1),
-    filter 520ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  transform 520ms cubic-bezier(0.2, 0.9, 0.2, 1),
+  opacity 520ms cubic-bezier(0.2, 0.9, 0.2, 1),
+  filter 520ms cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 
-/* overlay escuro no fundo para texto legÃ­vel */
+/* overlay escuro no fundo para texto legível */
 .tc-card::after {
   content: "";
   position: absolute;
@@ -499,8 +534,8 @@ h3, h4 {
 }
 
 /* =========================
-   RESPONSIVO
-   ========================= */
+RESPONSIVO
+========================= */
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -508,24 +543,24 @@ h3, h4 {
     padding: 90px 20px;
   }
 
-  .services__container {
-    max-width: 980px;
-    grid-template-columns: 1fr;
-    gap: 26px;
-  }
+.services__container {
+  max-width: 980px;
+  grid-template-columns: 1fr;
+  gap: 26px;
+}
 
-  .services__details {
-    max-width: 640px;
-  }
+.services__details {
+  max-width: 640px;
+}
 
-  .services__viewport {
-    height: 420px;
-  }
+.services__viewport {
+  height: 420px;
+}
 
-  .tc-card {
-    width: 300px;
-    height: 390px;
-  }
+.tc-card {
+  width: 300px;
+  height: 390px;
+}
 }
 
 /* Mobile */
@@ -534,24 +569,24 @@ h3, h4 {
     padding: 76px 16px;
   }
 
-  .services__title {
-    font-size: clamp(3rem, 11vw, 4rem);
-  }
+.services__title {
+  font-size: clamp(3rem, 11vw, 4rem);
+}
 
-  .services__viewport {
-    height: 380px;
-  }
+.services__viewport {
+  height: 380px;
+}
 
-  .tc-card {
-    width: 260px;
-    height: 340px;
-    border-radius: 16px;
-  }
+.tc-card {
+  width: 260px;
+  height: 340px;
+  border-radius: 16px;
+}
 
-  .services__nav {
-    width: 42px;
-    height: 42px;
-  }
+.services__nav {
+  width: 42px;
+  height: 42px;
+}
 }
 
 @media (max-width: 980px) {
@@ -559,55 +594,59 @@ h3, h4 {
     grid-template-columns: 1fr;
   }
 
-  .tc-viewport {
-    height: 320px;
-  }
-
-  .tc-left {
-    text-align: left;
-  }
+.tc-viewport {
+  height: 320px;
 }
 
-/* ====== SEÃ‡ÃƒO PARCEIROS / CLIENTES ====== */
+.tc-left {
+  text-align: left;
+}
+}
 
-/* animaÃ§Ã£o base do marquee */
+/* ====== SEÇÃO PARCEIROS / CLIENTES ====== */
+
+/* animação base do marquee */
 @keyframes marquee {
   from {
     transform: translateX(0);
   }
 
-  to {
-    transform: translateX(-50%);
-  }
+to {
+  transform: translateX(-50%);
+}
 }
 
-/* wrapper geral da seÃ§Ã£o (opcional, caso queira espaÃ§amento) */
+/* wrapper geral da seção (opcional, caso queira espaçamento) */
+
+/* =========================================================
+   Parceiros / Clientes (marquee + conteúdo central)
+   ========================================================= */
 .parceiros {
   background: #fdfdfd;
 }
 
 /* ====== MARQUEE LOGOS: LOOP PERFEITO (3 BLOCOS) ====== */
 
-/* AnimaÃ§Ã£o para frente: move exatamente o tamanho de 1 bloco */
+/* Animação para frente: move exatamente o tamanho de 1 bloco */
 @keyframes marquee-infinite {
   0% {
     transform: translateX(0);
   }
 
-  100% {
-    transform: translateX(-33.3333%);
-  }
+100% {
+  transform: translateX(-33.3333%);
+}
 }
 
-/* AnimaÃ§Ã£o reversa: comeÃ§a deslocada e volta para o zero */
+/* Animação reversa: começa deslocada e volta para o zero */
 @keyframes marquee-infinite-reverse {
   0% {
     transform: translateX(-33.3333%);
   }
 
-  100% {
-    transform: translateX(0);
-  }
+100% {
+  transform: translateX(0);
+}
 }
 
 .logos {
@@ -628,7 +667,7 @@ h3, h4 {
   will-change: transform;
 }
 
-/* Classe para o slider de baixo rodar ao contrÃ¡rio */
+/* Classe para o slider de baixo rodar ao contrário */
 .logos-track.is-reverse {
   animation: marquee-infinite-reverse 25s linear infinite;
 }
@@ -639,7 +678,7 @@ h3, h4 {
   align-items: center;
   flex-shrink: 0;
 
-  /* AJUSTE DE ESPAÃ‡AMENTO: O gap e o padding-right devem ser IGUAIS */
+  /* AJUSTE DE ESPAÇAMENTO: O gap e o padding-right devem ser IGUAIS */
   gap: 80px;
   padding-right: 80px;
 }
@@ -664,7 +703,7 @@ h3, h4 {
   filter: grayscale(0%);
 }
 
-/* Efeito de transparÃªncia nas bordas (fades) */
+/* Efeito de transparência nas bordas (fades) */
 .logos::before,
 .logos::after {
   content: "";
@@ -692,19 +731,19 @@ h3, h4 {
     padding: 30px 0;
   }
 
-  .logos-row {
-    /* No mobile, diminuÃ­mos o gap, mas mantemos a igualdade entre gap e padding */
-    gap: 40px;
-    padding-right: 40px;
-  }
+.logos-row {
+  /* No mobile, diminuimos o gap, mas mantemos a igualdade entre gap e padding */
+  gap: 40px;
+  padding-right: 40px;
+}
 
-  .logos-row img {
-    height: 38px;
-  }
+.logos-row img {
+  height: 38px;
+}
 
-  .logos-row img.logo-sky {
-    height: 30px;
-  }
+.logos-row img.logo-sky {
+  height: 30px;
+}
 }
 
 /* ====== CONTEÃšDO CENTRAL ====== */
@@ -770,6 +809,10 @@ h3, h4 {
 /*SECTION QUOTES*/
 
 /* Layout geral da seÃ§Ã£o */
+
+/* =========================================================
+   Depoimentos (carrossel)
+   ========================================================= */
 .quotes-section {
   padding: 80px 6vw;
   display: grid;
@@ -946,64 +989,68 @@ h3, h4 {
     gap: 22px;
   }
 
-  /* carrossel vira 1 coluna, setas em overlay */
-  .quotes-carousel {
-    display: block;
-    position: relative;
-  }
+/* carrossel vira 1 coluna, setas em overlay */
+.quotes-carousel {
+  display: block;
+  position: relative;
+}
 
-  .quote-viewport {
-    width: 100%;
-    height: 360px;
-    /* ajuste se quiser mais alto */
-    overflow: hidden;
-  }
+.quote-viewport {
+  width: 100%;
+  height: 360px;
+  /* ajuste se quiser mais alto */
+  overflow: hidden;
+}
 
-  /* remove o fade lateral (opcional, mas ajuda no mobile) */
-  .quote-viewport::before,
-  .quote-viewport::after {
-    display: none;
-  }
+/* remove o fade lateral (opcional, mas ajuda no mobile) */
+.quote-viewport::before,
+.quote-viewport::after {
+  display: none;
+}
 
-  /* setas por cima do viewport, centralizadas verticalmente */
-  .quote-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 44px;
-    height: 44px;
-    font-size: 26px;
-    background: rgba(255, 255, 255, 0.85);
-    /* garante contraste */
-    backdrop-filter: blur(6px);
-  }
+/* setas por cima do viewport, centralizadas verticalmente */
+.quote-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+  background: rgba(255, 255, 255, 0.85);
+  /* garante contraste */
+  backdrop-filter: blur(6px);
+}
 
-  .quote-nav.prev {
-    left: 10px;
-  }
+.quote-nav.prev {
+  left: 10px;
+}
 
-  .quote-nav.next {
-    right: 10px;
-  }
+.quote-nav.next {
+  right: 10px;
+}
 
-  /* card central ocupa mais largura */
-  .quote-track .card {
-    width: calc(100% - 120px);
-    /* deixa espaÃ§o visual para as setas */
-    padding: 22px;
-  }
+/* card central ocupa mais largura */
+.quote-track .card {
+  width: calc(100% - 120px);
+  /* deixa espaÃ§o visual para as setas */
+  padding: 22px;
+}
 
-  /* no mobile fica sÃ³ 1 card mesmo */
-  .quote-track .card.is-prev,
-  .quote-track .card.is-next {
-    opacity: 0;
-    pointer-events: none;
-  }
+/* no mobile fica sÃ³ 1 card mesmo */
+.quote-track .card.is-prev,
+.quote-track .card.is-next {
+  opacity: 0;
+  pointer-events: none;
+}
 }
 
 /* SEÃ‡ÃƒO DE FORMULÃRIOS*/
 
+
+/* =========================================================
+   Contato (formulário)
+   ========================================================= */
 .contact-forms {
   display: flex;
   height: 620px;
@@ -1014,16 +1061,16 @@ h3, h4 {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(900px 600px at 20% 50%,
-      rgba(255, 120, 0, 0.25),
-      transparent 60%),
-    radial-gradient(700px 500px at 80% 40%,
-      rgba(255, 80, 0, 0.18),
-      transparent 60%),
-    linear-gradient(180deg,
-      #140601 0%,
-      #1a0702 50%,
-      #0e0401 100%);
+  radial-gradient(900px 600px at 20% 50%,
+  rgba(255, 120, 0, 0.25),
+  transparent 60%),
+  radial-gradient(700px 500px at 80% 40%,
+  rgba(255, 80, 0, 0.18),
+  transparent 60%),
+  linear-gradient(180deg,
+  #140601 0%,
+  #1a0702 50%,
+  #0e0401 100%);
 
 }
 
@@ -1031,24 +1078,23 @@ h3, h4 {
   padding: 6rem 2rem 2rem 2rem;
   width: 50%;
 
-
   & h2 {
     font-size: 3rem;
     color: #FFFFFF;
     margin-bottom: 10px;
   }
 
-  & .content-tag {
-    text-align: justify;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: 700;
-  }
+& .content-tag {
+  text-align: justify;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+}
 
-  & p {
-    text-align: justify;
-    color: #FFFFFF;
-  }
+& p {
+  text-align: justify;
+  color: #FFFFFF;
+}
 }
 
 .contact-forms .forms {
@@ -1063,7 +1109,6 @@ h3, h4 {
   align-content: center;
 }
 
-
 .contact-forms .forms form {
   display: grid;
   grid-template-columns: 1;
@@ -1077,19 +1122,19 @@ h3, h4 {
     margin-bottom: 10px;
   }
 
-  & input,
-  textarea {
-    font: inherit;
-    font-size: 16px;
-    padding: 0.8rem;
-    margin-bottom: 2rem;
-    border: 1px solid transparent;
-    border-radius: 20px;
-  }
+& input,
+textarea {
+  font: inherit;
+  font-size: 16px;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
 
-  & textarea {
-    height: 100px;
-  }
+& textarea {
+  height: 100px;
+}
 }
 
 .contact-forms .forms form button {
@@ -1115,9 +1160,9 @@ h3, h4 {
 
   box-shadow: 0 0 0 0 rgba(255, 115, 0, 0);
   transition:
-    transform 180ms ease,
-    background 180ms ease,
-    box-shadow 180ms ease;
+  transform 180ms ease,
+  background 180ms ease,
+  box-shadow 180ms ease;
 }
 
 .contact-forms .forms form button:hover {
@@ -1132,10 +1177,14 @@ h3, h4 {
 
 /*
 =========================
-      FOOTER: sitemap, informaÃ§Ãµes legais, serviÃ§os, contato
+FOOTER: sitemap, informaÃ§Ãµes legais, serviÃ§os, contato
 =========================
 */
 
+
+/* =========================================================
+   Rodapé
+   ========================================================= */
 .rodape{
   position: relative;
   overflow: hidden;
@@ -1145,9 +1194,9 @@ h3, h4 {
   border-top:1px solid rgba(255, 115, 0, 0.38);
 
   background:
-    radial-gradient(900px 600px at 20% 50%, rgba(255, 120, 0, 0.18), transparent 60%),
-    radial-gradient(700px 500px at 80% 40%, rgba(255, 80, 0, 0.12), transparent 60%),
-    linear-gradient(180deg, #0e0401 0%, #140601 55%, #0e0401 100%);
+  radial-gradient(900px 600px at 20% 50%, rgba(255, 120, 0, 0.18), transparent 60%),
+  radial-gradient(700px 500px at 80% 40%, rgba(255, 80, 0, 0.12), transparent 60%),
+  linear-gradient(180deg, #0e0401 0%, #140601 55%, #0e0401 100%);
 }
 
 .rodape-container{
@@ -1228,8 +1277,8 @@ h3, h4 {
 }
 
 /* ========================
-   WATERMARK (logo gigante)
-   â€œbem abaixoâ€ do conteÃºdo
+WATERMARK (logo gigante)
+â€œbem abaixoâ€ do conteÃºdo
 ======================== */
 
 .rodape-watermark{
@@ -1250,7 +1299,7 @@ h3, h4 {
 }
 
 /* ========================
-   RESPONSIVO
+RESPONSIVO
 ======================== */
 
 @media (max-width: 980px){
@@ -1258,15 +1307,15 @@ h3, h4 {
     padding: 90px 6% 200px;
   }
 
-  .rodape-container{
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-  }
+.rodape-container{
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
 
-  .rodape-watermark{
-    width: min(1200px, 170vw);
-    bottom: -180px;
-  }
+.rodape-watermark{
+  width: min(1200px, 170vw);
+  bottom: -180px;
+}
 }
 
 @media (max-width: 600px){
@@ -1274,14 +1323,566 @@ h3, h4 {
     padding: 70px 6% 180px;
   }
 
-  .rodape-container{
-    grid-template-columns: 1fr;
-    gap: 40px;
+.rodape-container{
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.rodape-watermark{
+  width: min(980px, 220vw);
+  bottom: -220px;
+  opacity: 0.08;
+}
+}
+
+
+/* =========================================================
+   RESPONSIVO GLOBAL
+   Regras adicionadas sem alterar classes/estrutura existentes
+   Breakpoints:
+   - Tablet: até 1024px
+   - Mobile: até 600px
+   Observação do menu:
+   - O HTML já possui o botão .nav-toggle (#navToggle)
+   - Para abrir/fechar o menu no mobile/tablet, o JS deve alternar
+     a classe .nav-open no <header class="header"> (ou no body).
+     Ex.: header.classList.toggle('nav-open')
+   ========================================================= */
+
+
+/* =========================
+   TABLET (<= 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+
+  /* HEADER */
+  .header {
+    padding: 18px 24px;
   }
 
-  .rodape-watermark{
-    width: min(980px, 220vw);
-    bottom: -220px;
+  .header.scrolled {
+    padding: 10px 24px;
+  }
+
+  .header .logo a img {
+    width: 220px;
+  }
+
+  /* Botão hambúrguer aparece */
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .nav-toggle__bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 999px;
+    position: relative;
+  }
+
+  .nav-toggle__bar + .nav-toggle__bar {
+    margin-top: 6px;
+  }
+
+  /* NAV vira painel */
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: min(420px, 86vw);
+    padding: 96px 22px 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transform: translateX(110%);
+    transition: transform 260ms ease;
+    z-index: 60;
+  }
+
+  .nav-bar a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .nav-bar a:hover {
+    font-size: 18px;
+  }
+
+  /* Estado aberto do menu (JS aplica .nav-open) */
+  .header.nav-open .nav-bar {
+    transform: translateX(0);
+  }
+
+  /* Ajuste do hero, evita corte por barras do navegador */
+  .hero-section {
+    height: 600px;
+    background: #000; /* cor das bordas quando sobrar espaço */
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;     /* mostra o vídeo inteiro */
+    object-position: center; /* centraliza */
+    display: block;
+  }
+
+  /* SOBRE */
+  .about {
+    padding: 3.5rem 5%;
+    gap: 2rem;
+  }
+
+  .about .content {
+    padding: 1.25rem;
+  }
+
+  .about .content h1 {
+    font-size: 4rem;
+  }
+
+  /* CLIENTES */
+  .clients-content {
+    margin: 26px auto;
+    padding: 2.5rem 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .clients-content .clients-text {
+    max-width: 100%;
+  }
+
+  /* DEPOIMENTOS */
+  .quotes-section {
+    padding: 70px 5vw;
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .quotes-content p {
+    max-width: 52ch;
+  }
+
+  /* CONTATO */
+  .contact-forms {
+    height: auto;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-forms .forms,
+  .contact-forms .contact-content {
+    width: 100%;
+  }
+
+  .contact-forms .contact-content {
+    padding: 2.5rem 0 0;
+  }
+
+  .contact-forms .forms form button {
+    width: 160px;
+  }
+}
+
+
+/* =========================================================
+   POST PAGE (leitura)
+   Mantém estética do site e melhora legibilidade
+   ========================================================= */
+
+.post-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 700px at 25% 25%, rgba(255, 115, 0, 0.10), transparent 60%),
+    radial-gradient(900px 600px at 75% 30%, rgba(255, 115, 0, 0.07), transparent 60%),
+    linear-gradient(180deg, #070606 0%, #0b0706 100%);
+}
+
+/* HERO */
+.post-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 140px 6% 60px;
+}
+
+.post-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.85) 100%),
+    radial-gradient(900px 500px at 30% 40%, rgba(255, 115, 0, 0.18), transparent 60%),
+    url("../midia/posts/blog-1.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  filter: saturate(1.05);
+}
+
+.post-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* BOTÃO VOLTAR */
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 115, 0, 0.30);
+  background: rgba(255, 115, 0, 0.08);
+  color: #fff;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: transform 160ms ease, background 160ms ease;
+  margin-bottom: 18px;
+}
+
+.post-back:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 115, 0, 0.12);
+}
+
+.post-kicker {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.post-title {
+  font-family: "bebas-neue", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+  line-height: 0.95;
+  margin: 0 0 12px;
+}
+
+.post-subtitle {
+  max-width: 70ch;
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin: 0 0 14px;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  opacity: 0.78;
+}
+
+.post-meta__dot {
+  opacity: 0.6;
+}
+
+/* ARTIGO */
+.post-article {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 34px 20px 80px;
+}
+
+.post-cover {
+  margin: -32px 0 22px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 115, 0, 0.18);
+  background: rgba(255, 115, 0, 0.05);
+}
+
+.post-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* CONTEÚDO OTIMIZADO PRA LEITURA */
+.post-content {
+  max-width: 74ch;         /* leitura confortável */
+  margin: 0 auto;
+
+  font-size: 16px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.92);
+}
+
+.post-content .lead {
+  font-size: 18px;
+  line-height: 1.85;
+  opacity: 0.95;
+}
+
+.post-content h2 {
+  margin: 28px 0 10px;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+.post-content h3 {
+  margin: 22px 0 8px;
+  font-size: 18px;
+  line-height: 1.25;
+  opacity: 0.98;
+}
+
+.post-content p {
+  margin: 0 0 14px;
+  opacity: 0.95;
+}
+
+.post-content ul {
+  margin: 0 0 16px 18px;
+}
+
+.post-content li {
+  margin: 6px 0;
+}
+
+.post-content blockquote {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border-left: 3px solid rgba(255, 115, 0, 0.65);
+  background: rgba(255, 115, 0, 0.08);
+  border-radius: 12px;
+  opacity: 0.95;
+}
+
+.post-content hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.10);
+  margin: 26px 0;
+}
+
+/* CTA discreto */
+.post-cta {
+  padding: 18px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 115, 0, 0.22);
+  background: rgba(255, 115, 0, 0.08);
+}
+
+.post-cta h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.post-cta p {
+  margin: 0 0 12px;
+  opacity: 0.9;
+}
+
+.post-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 115, 0, 0.35);
+  background: rgba(255, 115, 0, 0.14);
+  color: #fff;
+  text-decoration: none;
+
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.post-cta__btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 115, 0, 0.18);
+}
+
+/* voltar no fim */
+.post-footer {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.post-back--bottom {
+  text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .post-hero { padding: 120px 5% 54px; }
+}
+
+@media (max-width: 600px) {
+  .post-hero { padding: 112px 6% 50px; }
+  .post-subtitle { font-size: 16px; }
+  .post-content { font-size: 15.5px; line-height: 1.85; }
+  .post-content .lead { font-size: 16.5px; }
+}
+
+/* =========================
+   MOBILE (<= 600px)
+   ========================= */
+@media (max-width: 600px) {
+
+  /* HEADER */
+  .header {
+    padding: 14px 16px;
+  }
+
+  .header.scrolled {
+    padding: 10px 16px;
+  }
+
+  .header .logo a img {
+    width: 170px;
+  }
+
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 0.8px solid #F37600;
+
+    & img {
+      width: 22px;
+    }
+  }
+
+  /* NAV painel mais estreito */
+  .nav-bar {
+    width: min(200px, 90vw);
+    padding: 86px 18px 18px;
+  }
+
+  .hero-section {
+    background: #000;
+    height: 250px;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
+
+  /* SOBRE */
+  .about {
+    flex-direction: column;
+    padding: 3rem 6%;
+  }
+
+  .about .img-section {
+    width: 100%;
+  }
+
+  .about .blob-media {
+    max-width: 420px;
+  }
+
+  .about .content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .about .content h1 {
+    font-size: 3.2rem;
+  }
+
+  .about .content p {
+    font-size: 16px;
+  }
+
+  /* MARQUEE: suaviza no mobile */
+  .logos::before,
+  .logos::after {
+    width: 90px;
+  }
+
+  /* CLIENTES */
+  .clients-content {
+    padding: 2rem 1.2rem;
+    border-radius: 18px;
+  }
+
+  .clients-content .title h2 {
+    font-size: clamp(2.6rem, 10vw, 3.6rem);
+  }
+
+  .clients-content .clients-text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* DEPOIMENTOS: ajuste fino */
+  .quote-viewport {
+    height: 540px;
+  }
+
+  .quote-track .card {
+    width: calc(100% - 96px);
+    border-radius: 16px;
+  }
+
+  /* CONTATO */
+  .contact-forms {
+    padding: 2.2rem 1.2rem;
+  }
+
+  .contact-forms .forms {
+    padding: 1.4rem;
+    border-radius: 22px;
+  }
+
+  .contact-forms .forms form input,
+  .contact-forms .forms form textarea {
+    border-radius: 16px;
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-forms .contact-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .contact-forms .forms form button {
+    width: 150px;
+    height: 46px;
+  }
+
+  .rodape-watermark {
+    width: min(380px, 220vw);
+    bottom: -10px;
     opacity: 0.08;
   }
 }

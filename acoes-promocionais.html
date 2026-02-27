@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Serviço | Nome do Serviço</title>
+
+  <!-- Fontes iguais às da home -->
+  <link rel="stylesheet" href="https://use.typekit.net/htb2smi.css">
+  <link href="https://db.onlinewebfonts.com/c/2bf16335573007d828f4197c2b884c04?family=Satoshi" rel="stylesheet">
+
+  <!-- CSS do header (reaproveita o seu style-home.css) -->
+  <link rel="stylesheet" href="css/style-home.css">
+
+  <!-- CSS próprio da página de serviço -->
+  <link rel="stylesheet" href="css/service-page.css" />
+</head>
+
+<body>
+
+  <!-- HEADER igual ao index -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"><img src="midia/mobi-logo-reduzida.png" alt="logo-mobicomunicacao"></a>
+    </div>
+
+    <nav class="nav-bar">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#services">Nossos Serviços</a>
+      <a href="index.html#clients">Nossos clientes</a>
+      <a href="index.html#quotes">Depoimentos</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contato</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <img src="midia/botao-de-menu.png" alt="menu-hamburguer">
+    </button>
+  </header>
+
+  <main class="svc">
+
+    <!-- HERO DO SERVIÇO -->
+    <section class="svc-hero">
+      <div class="svc-hero__bg" aria-hidden="true"></div>
+
+      <div class="svc-hero__container">
+        <div class="svc-hero__top">
+          <a class="svc-back" href="index.html#services">← Voltar para serviços</a>
+          <span class="svc-pill">Solução</span>
+        </div>
+
+        <h1 class="svc-hero__title">Panfletagem Estratégica e Distribuição Inteligente</h1>
+        <p class="svc-hero__subtitle">
+          Coloque sua oferta no lugar certo, com controle, abordagem alinhada à marca e foco em resultado.
+        </p>
+
+        <div class="svc-hero__cta">
+          <a class="svc-btn svc-btn--primary" href="index.html#contact">Quero um orçamento</a>
+          <a class="svc-btn svc-btn--ghost" href="#como-funciona">Como funciona</a>
+        </div>
+
+        <div class="svc-metrics">
+          <div class="svc-metric">
+            <span class="svc-metric__label">Planejamento</span>
+            <strong class="svc-metric__value">Rota + público</strong>
+          </div>
+          <div class="svc-metric">
+            <span class="svc-metric__label">Execução</span>
+            <strong class="svc-metric__value">Equipe treinada</strong>
+          </div>
+          <div class="svc-metric">
+            <span class="svc-metric__label">Transparência</span>
+            <strong class="svc-metric__value">Acompanhamento</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section class="svc-body">
+      <div class="svc-body__grid">
+
+        <!-- Coluna principal -->
+        <article class="svc-main">
+          <section class="svc-card">
+            <h2>Para quem é</h2>
+            <p>
+              Supermercados e comércios locais que precisam aumentar fluxo, divulgar promoções e gerar presença de marca
+              no bairro, com execução confiável.
+            </p>
+
+            <div class="svc-list">
+              <div class="svc-list__item">Ações recorrentes (encartes e campanhas)</div>
+              <div class="svc-list__item">Lançamentos e inaugurações</div>
+              <div class="svc-list__item">Reforço de marca e lembrança</div>
+            </div>
+          </section>
+
+          <section class="svc-card" id="como-funciona">
+            <h2>Como funciona</h2>
+
+            <ol class="svc-steps">
+              <li class="svc-step">
+                <strong>Diagnóstico rápido</strong>
+                <p>Objetivo, região, perfil do público e mensagem principal.</p>
+              </li>
+              <li class="svc-step">
+                <strong>Planejamento</strong>
+                <p>Rota, horários, abordagem e padrão de entrega.</p>
+              </li>
+              <li class="svc-step">
+                <strong>Execução</strong>
+                <p>Equipe alinhada e operação organizada no ponto certo.</p>
+              </li>
+              <li class="svc-step">
+                <strong>Relatório</strong>
+                <p>Consolidação do que foi feito e recomendações para melhorar resultado.</p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="svc-card">
+            <h2>O que você recebe</h2>
+            <div class="svc-deliverables">
+              <div class="svc-deliverable">
+                <h3>Operação organizada</h3>
+                <p>Equipe, abordagem e execução com consistência.</p>
+              </div>
+              <div class="svc-deliverable">
+                <h3>Visibilidade real</h3>
+                <p>Sua oferta circulando onde o público compra e decide.</p>
+              </div>
+              <div class="svc-deliverable">
+                <h3>Controle e clareza</h3>
+                <p>Acompanhamento e registro do trabalho.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="svc-card">
+            <h2>Perguntas frequentes</h2>
+            <div class="svc-faq">
+              <details class="svc-faq__item">
+                <summary>Qual a duração típica de uma ação?</summary>
+                <p>Depende da região e volume de material. Normalmente dá para planejar por turnos ou por dias.</p>
+              </details>
+
+              <details class="svc-faq__item">
+                <summary>Vocês ajudam com a estratégia do encarte?</summary>
+                <p>Sim. A recomendação de abordagem e posicionamento faz parte do planejamento da ação.</p>
+              </details>
+
+              <details class="svc-faq__item">
+                <summary>Como eu solicito orçamento?</summary>
+                <p>Use o botão “Quero um orçamento” e envie região, objetivo e período.</p>
+              </details>
+            </div>
+          </section>
+        </article>
+
+        <!-- Coluna lateral: CTA estratégico -->
+        <aside class="svc-aside">
+          <div class="svc-sticky">
+            <div class="svc-sidecard">
+              <h3>Pronto para executar?</h3>
+              <p>Envie região, objetivo e datas. Você recebe uma proposta rápida e objetiva.</p>
+
+              <a class="svc-btn svc-btn--primary svc-btn--full" href="index.html#contact">
+                Solicitar orçamento
+              </a>
+
+              <div class="svc-sideinfo">
+                <div class="svc-sideinfo__row">
+                  <span class="svc-dot"></span>
+                  <span>Planejamento + execução</span>
+                </div>
+                <div class="svc-sideinfo__row">
+                  <span class="svc-dot"></span>
+                  <span>Equipe alinhada à marca</span>
+                </div>
+                <div class="svc-sideinfo__row">
+                  <span class="svc-dot"></span>
+                  <span>Relatório de ação</span>
+                </div>
+              </div>
+            </div>
+
+            <a class="svc-back svc-back--muted" href="index.html">Voltar para a home</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+                Rodapé
+                ========================================================= -->
+  <footer class="rodape">
+    <!-- watermark gigante no fundo -->
+    <img class="rodape-watermark" src="midia/mobi-logo-reduzida.png" alt="" aria-hidden="true">
+
+    <div class="rodape-container">
+      <div class="rodape-col rodape-brand">
+        <!-- logo pequena no topo -->
+        <a href="index.html">
+          <img src="midia/mobi-logo-reduzida.png" alt="logo mobi comunicação" class="rodape-logo-top">
+        </a>
+
+        <div class="rodape-social">
+          <a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Whatsapp"><i class="fa fa-whatsapp"></i></a>
+          <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+
+        <p class="rodape-copy">
+          © 2026, Todos os direitos reservados. Mobi Comunicação
+        </p>
+      </div>
+
+      <div class="rodape-col">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#services">Nossos Serviços</a></li>
+          <li><a href="#clients">Nossos Clientes</a></li>
+          <li><a href="#quotes">Depoimentos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-col">
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="panfletagem.html">Panfletagem Estratégica e Distribuição Inteligente</a></li>
+          <li><a href="acoes-promocionais.html">Ações Promocionais e Eventos no Ponto de Venda</a></li>
+          <li><a href="marketing-presenca.html">Marketing de Presença e Ativação de Marca</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape-col">
+        <h4>Informações legais</h4>
+        <ul>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+   <!-- =========================================================
+                Scripts
+                - Bibliotecas externas primeiro
+                - Depois scripts locais
+                - Depois scripts inline específicos desta página
+                ========================================================= -->
+  <script src="https://kit.fontawesome.com/78606a000b.js" crossorigin="anonymous"></script>
+  <script>
+    // Header "glass" ao rolar (você já tem isso — mantido)
+    const header = document.querySelector(".header");
+    if (header) {
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 10);
+      });
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('#app'),
+      smooth: true,
+    });
+  </script>
+  </script>
+  <script src="script/menu-hamburguer.js"></script>
+
+</body>
+</html>

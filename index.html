@@ -1,17 +1,31 @@
 <!DOCTYPE html>
+<!--
+=============================================================
+MOBI Comunicação
+=============================================================
+-->
 <html lang="pt-br">
 
 <head>
+  <!-- Meta / SEO básico -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
   <link rel="shortcut icon" href="midia/mobi.png" type="image/x-icon">
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style-home.css">
+  <!-- Fontes (Adobe Typekit) -->
   <link rel="stylesheet" href="https://use.typekit.net/htb2smi.css">
+  <!-- Fonte adicional (Online Web Fonts) -->
   <link href="https://db.onlinewebfonts.com/c/2bf16335573007d828f4197c2b884c04?family=Satoshi" rel="stylesheet">
   <title>Home Mobi Comunicação</title>
 </head>
 
 <body>
+
+  <!-- =========================================================
+    Header
+    ========================================================= -->
   <header class="header">
     <div class="logo">
       <a href="index.html"><img src="midia/mobi-logo-reduzida.png" alt="logo-mobicomunicacao"></a>
@@ -29,20 +43,26 @@
 
     <!-- Botão do menu mobile (hambúrguer) -->
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-      <span class="nav-toggle__bar"></span>
-      <span class="nav-toggle__bar"></span>
-      <span class="nav-toggle__bar"></span>
+      <img src="midia/botao-de-menu.png" alt="menu-hamburguer">
     </button>
 
- 
+
   </header>
 
+
+  <!-- =========================================================
+    Hero
+    ========================================================= -->
   <section id="home" class="hero-section">
     <video class="hero-video" autoplay loop playsinline preload="metadata">
       <source src="midia/vid/MOBI_2.mp4" type="video/mp4" />
     </video>
   </section>
 
+
+  <!-- =========================================================
+    Sobre
+    ========================================================= -->
   <section id="sobre" class="about">
     <div class="img-section blob-media" aria-label="Equipe panfletadora">
       <svg class="blob" viewBox="0 0 600 600" role="img" aria-hidden="true">
@@ -62,11 +82,11 @@
           d="M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z">
           <animate attributeName="d" dur="3.5s" repeatCount="indefinite" calcMode="spline"
             keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1" values="
-        M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z;
-        M472,126 C525,205 536,284 498,362 C460,440 378,493 292,512 C206,531 109,520 76,446 C43,372 60,241 155,156 C250,71 419,47 472,126 Z;
-        M440,90 C503,140 560,235 536,324 C512,413 407,504 305,532 C204,559 100,522 76,439 C51,355 90,224 170,138 C250,52 377,40 440,90 Z;
-        M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z
-        " />
+                M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z;
+                M472,126 C525,205 536,284 498,362 C460,440 378,493 292,512 C206,531 109,520 76,446 C43,372 60,241 155,156 C250,71 419,47 472,126 Z;
+                M440,90 C503,140 560,235 536,324 C512,413 407,504 305,532 C204,559 100,522 76,439 C51,355 90,224 170,138 C250,52 377,40 440,90 Z;
+                M452,96 C525,165 555,269 520,352 C484,435 381,497 287,524 C193,550 108,541 74,458 C41,375 58,218 150,129 C243,40 379,26 452,96 Z
+                " />
         </path>
 
         <!-- Imagem recortada -->
@@ -95,6 +115,10 @@
     </div>
   </section>
 
+
+  <!-- =========================================================
+          Serviços (carrossel)
+          ========================================================= -->
   <section id="services" class="services">
     <div class="services__container">
       <!-- Coluna esquerda: texto -->
@@ -131,6 +155,10 @@
     </div>
   </section>
 
+
+  <!-- =========================================================
+          Parceiros / Clientes (logos + texto)
+          ========================================================= -->
   <section class="parceiros">
     <!-- Slider top -->
     <div class="logos" id="clients">
@@ -217,6 +245,10 @@
     </div>
   </section>
 
+
+  <!-- =========================================================
+          Depoimentos (carrossel)
+          ========================================================= -->
   <section class="quotes-section" id="quotes">
     <div class="quotes-content">
       <h2>Depoimentos dos nossos clientes</h2>
@@ -327,6 +359,10 @@
     </div>
   </section>
 
+
+  <!-- =========================================================
+              Contato (formulário + texto)
+              ========================================================= -->
   <section class="contact-forms" id="contact">
     <div class="forms">
       <form action="https://formsubmit.co/mobi@gmail.com" method="POST">
@@ -353,6 +389,10 @@
     </div>
   </section>
 
+
+  <!-- =========================================================
+                Rodapé
+                ========================================================= -->
   <footer class="rodape">
     <!-- watermark gigante no fundo -->
     <img class="rodape-watermark" src="midia/mobi-logo-reduzida.png" alt="" aria-hidden="true">
@@ -360,7 +400,7 @@
     <div class="rodape-container">
       <div class="rodape-col rodape-brand">
         <!-- logo pequena no topo -->
-        <a href="#home">
+        <a href="index.html">
           <img src="midia/mobi-logo-reduzida.png" alt="logo mobi comunicação" class="rodape-logo-top">
         </a>
 
@@ -371,14 +411,14 @@
         </div>
 
         <p class="rodape-copy">
-          2026, Todos direitos reservados. Mobi Comunicação
+          © 2026, Todos os direitos reservados. Mobi Comunicação
         </p>
       </div>
 
       <div class="rodape-col">
         <h4>Sitemap</h4>
         <ul>
-          <li><a href="#home">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#services">Nossos Serviços</a></li>
           <li><a href="#clients">Nossos Clientes</a></li>
@@ -407,76 +447,35 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+
+  <!-- =========================================================
+                Scripts
+                - Bibliotecas externas primeiro
+                - Depois scripts locais
+                - Depois scripts inline específicos desta página
+                ========================================================= -->
   <script src="https://kit.fontawesome.com/78606a000b.js" crossorigin="anonymous"></script>
   <script src="script/carrosel.js"></script>
   <script src="script/quote-carrosel.js"></script>
-  <!-- Ações flutuantes -->
-
-
-<script>
-  // Header "glass" ao rolar (você já tem isso — mantido)
-  const header = document.querySelector(".header");
-  if (header) {
-    window.addEventListener("scroll", () => {
-      header.classList.toggle("scrolled", window.scrollY > 10);
-    });
-  }
-
-  // Botão "voltar ao topo": só aparece depois de rolar
-  const fabTop = document.getElementById("fabTop");
-  window.addEventListener("scroll", () => {
-    if (!fabTop) return;
-    fabTop.classList.toggle("is-visible", window.scrollY > 350);
-  });
-
-  // Menu mobile (hambúrguer)
-  const navToggle = document.getElementById("navToggle");
-  const navMobile = document.getElementById("navMobile");
-
-  function closeMobileNav() {
-    document.body.classList.remove("is-nav-open");
-    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
-    if (navMobile) navMobile.setAttribute("aria-hidden", "true");
-  }
-
-  function openMobileNav() {
-    document.body.classList.add("is-nav-open");
-    if (navToggle) navToggle.setAttribute("aria-expanded", "true");
-    if (navMobile) navMobile.setAttribute("aria-hidden", "false");
-  }
-
-  navToggle?.addEventListener("click", () => {
-    const isOpen = document.body.classList.contains("is-nav-open");
-    isOpen ? closeMobileNav() : openMobileNav();
-  });
-
-  // Fechar ao clicar fora do painel
-  navMobile?.addEventListener("click", (e) => {
-    if (e.target === navMobile) closeMobileNav();
-  });
-
-  // Fechar ao clicar em qualquer link do menu
-  navMobile?.querySelectorAll("a")?.forEach((a) => {
-    a.addEventListener("click", closeMobileNav);
-  });
-
-  // Fechar com ESC
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMobileNav();
-  });
-
-  // LocomotiveScroll: seu código atual tenta usar "#app"; evita erro se não existir
-  // (mantém a ideia de "não quebrar" nada)
-  try {
-    const el = document.querySelector("#app");
-    if (window.LocomotiveScroll && el) {
-      new LocomotiveScroll({ el, smooth: true });
+  <script>
+    // Header "glass" ao rolar (você já tem isso — mantido)
+    const header = document.querySelector(".header");
+    if (header) {
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 10);
+      });
     }
-  } catch (err) {
-    // Silently ignore if LocomotiveScroll is not available
-  }
-</script>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('#app'),
+      smooth: true,
+    });
+  </script>
+  </script>
+  <script src="script/menu-hamburguer.js"></script>
 </body>
 
 </html>

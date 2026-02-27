@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Título do Post</title>
+
+    <!-- use o mesmo CSS do site -->
+    <link rel="stylesheet" href="../css/style-home.css">
+</head>
+
+<body>
+    <!-- =========================================================
+    Header
+    ========================================================= -->
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html"><img src="../midia/mobi-logo-reduzida.png" alt="logo-mobicomunicacao"></a>
+        </div>
+
+        <nav class="nav-bar">
+            <a href="../index.html">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#services">Nossos Serviços</a>
+            <a href="#clients">Nossos clientes</a>
+            <a href="#quotes">Depoimentos</a>
+            <a href="../blog.html">Blog</a>
+            <a href="#contact">Contato</a>
+        </nav>
+
+        <!-- Botão do menu mobile (hambúrguer) -->
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+            <img src="../midia/botao-de-menu.png" alt="menu-hamburguer">
+        </button>
+
+
+    </header>
+
+    <main class="post-page">
+
+        <!-- HERO DO POST -->
+        <header class="post-hero">
+            <div class="post-hero__bg" aria-hidden="true"></div>
+
+            <div class="post-hero__inner">
+                <button class="post-back" type="button" onclick="history.back()">
+                    ← Voltar
+                </button>
+
+                <p class="post-kicker">Guia</p>
+                <h1 class="post-title">Título do Post para Leitura</h1>
+                <p class="post-subtitle">
+                    Um subtítulo curto que explica em uma frase o que a pessoa vai aprender.
+                </p>
+
+                <div class="post-meta">
+                    <time datetime="2026-02-26">26 fev 2026</time>
+                    <span class="post-meta__dot">•</span>
+                    <span>Por Nome da Empresa</span>
+                    <span class="post-meta__dot">•</span>
+                    <span>5 min de leitura</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO -->
+        <article class="post-article" aria-label="Conteúdo do post">
+            <figure class="post-cover">
+                <img src="../midia/posts/blog-1.jpg" alt="Imagem de capa do post" />
+            </figure>
+
+            <div class="post-content">
+                <p class="lead">
+                    Parágrafo de abertura. Aqui você explica o contexto e dá uma promessa clara do post.
+                </p>
+
+                <h2>1. Primeiro ponto</h2>
+                <p>Texto do parágrafo. Texto do parágrafo. Texto do parágrafo.</p>
+
+                <h3>Detalhe importante</h3>
+                <p>Texto do parágrafo com uma explicação mais específica.</p>
+
+                <blockquote>
+                    Uma frase curta de impacto ou uma conclusão parcial.
+                </blockquote>
+
+                <h2>2. Segundo ponto</h2>
+                <p>Texto do parágrafo. Texto do parágrafo. Texto do parágrafo.</p>
+
+                <ul>
+                    <li>Item objetivo</li>
+                    <li>Outro item</li>
+                    <li>Mais um item</li>
+                </ul>
+
+                <hr />
+
+                <div class="post-cta">
+                    <h3>Quer aplicar isso no seu caso?</h3>
+                    <p>Frase curta chamando para ação, sem poluir a leitura.</p>
+                    <a class="post-cta__btn" href="../contato.html">Falar no WhatsApp</a>
+                </div>
+
+                <div class="post-footer">
+                    <a class="post-back post-back--bottom" href="../blog.html">Voltar para o Blog</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- =========================================================
+                Rodapé
+                ========================================================= -->
+    <footer class="rodape">
+        <!-- watermark gigante no fundo -->
+        <img class="rodape-watermark" src="../midia/mobi-logo-reduzida.png" alt="" aria-hidden="true">
+
+        <div class="rodape-container">
+            <div class="rodape-col rodape-brand">
+                <!-- logo pequena no topo -->
+                <a href="#home">
+                    <img src="../midia/mobi-logo-reduzida.png" alt="logo mobi comunicação" class="rodape-logo-top">
+                </a>
+
+                <div class="rodape-social">
+                    <a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Whatsapp"><i class="fa fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+
+                <p class="rodape-copy">
+                    © 2026, Todos os direitos reservados. Mobi Comunicação
+                </p>
+            </div>
+
+            <div class="rodape-col">
+                <h4>Sitemap</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#services">Nossos Serviços</a></li>
+                    <li><a href="#clients">Nossos Clientes</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-col">
+                <h4>Soluções</h4>
+                <ul>
+                    <li><a href="../panfletagem.html">Panfletagem Estratégica e Distribuição Inteligente</a></li>
+                    <li><a href="../acoes-promocionais.html">Ações Promocionais e Eventos no Ponto de Venda</a></li>
+                    <li><a href="../marketing-presenca.html">Marketing de Presença e Ativação de Marca</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-col">
+                <h4>Informações legais</h4>
+                <ul>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/menu-hamburguer.js"></script>
+    <script>
+        // Header "glass" ao rolar (você já tem isso — mantido)
+        const header = document.querySelector(".header");
+        if (header) {
+            window.addEventListener("scroll", () => {
+                header.classList.toggle("scrolled", window.scrollY > 10);
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#app'),
+            smooth: true,
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/78606a000b.js" crossorigin="anonymous"></script>
+
+    <script>
+        // fallback: se não houver histórico, volta para o blog
+        (function () {
+            const btn = document.querySelector(".post-back");
+            if (!btn) return;
+            btn.addEventListener("click", function () {
+                if (window.history.length <= 1) window.location.href = "../blog.html";
+            });
+        })();
+    </script>
+</body>
+
+</html>

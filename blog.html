@@ -1,11 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style-blog.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="midia/mobi.png" type="image/x-icon">
+    <!-- Fontes (Adobe Typekit) -->
+    <link rel="stylesheet" href="https://use.typekit.net/htb2smi.css">
+    <!-- Fonte adicional (Online Web Fonts) -->
+    <link href="https://db.onlinewebfonts.com/c/2bf16335573007d828f4197c2b884c04?family=Satoshi" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <main class="blog">
+
+        <!-- =========================================================
+    Header
+    ========================================================= -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html"><img src="midia/mobi-logo-reduzida.png" alt="logo-mobicomunicacao"></a>
+            </div>
+
+            <nav class="nav-bar">
+                <a href="index.html">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#services">Nossos Serviços</a>
+                <a href="#clients">Nossos clientes</a>
+                <a href="#quotes">Depoimentos</a>
+                <a href="blog.html">Blog</a>
+                <a href="#contact">Contato</a>
+            </nav>
+
+            <!-- Botão do menu mobile (hambúrguer) -->
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <img src="midia/botao-de-menu.png" alt="menu-hamburguer">
+            </button>
+
+
+        </header>
+
+        <section class="blog-hero">
+            <div class="blog-hero__bg" aria-hidden="true"></div>
+
+            <div class="blog-hero__content">
+                <p class="blog-hero__kicker">BLOG</p>
+                <h1 class="blog-hero__title">Conteúdos e atualizações</h1>
+                <p class="blog-hero__sub">
+                    Dicas, novidades e artigos para ajudar você a tomar decisões com mais clareza.
+                </p>
+            </div>
+        </section>
+
+        <!-- LISTAGEM (seção laranja escura, 3 colunas) -->
+        <section class="blog-grid">
+            <div class="blog-grid__container">
+
+                <header class="blog-grid__header">
+                    <h2>Últimos posts</h2>
+                    <p>Seleção de conteúdos recentes.</p>
+                </header>
+
+                <div class="blog-grid__posts">
+
+                    <article class="blog-card">
+                        <a class="blog-card__link" href="posts/pagina-padrao.html">
+                            <img class="blog-card__thumb" src="midia/posts/blog-1.jpg" alt="Capa do post">
+                            <div class="blog-card__body">
+                                <h3 class="blog-card__title">Panfletagem com estratégia: como o marketing offline
+                                    continua gerando movimento real no varejo.</h3>
+                                <p class="blog-card__excerpt">
+                                    Descubra como a panfletagem, quando combinada com estratégias de marketing digital,
+                                    pode impulsionar o tráfego e as vendas no varejo. Saiba como criar campanhas
+                                    eficazes que conectam o mundo offline ao online.
+                                </p>
+
+                                <div class="blog-card__meta">
+                                    <time datetime="2026-02-10">10 fev 2026</time>
+                                    <span class="blog-card__tag">Guia</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card">
+                        <a class="blog-card__link" href="posts/pagina-padrao.html">
+                            <img class="blog-card__thumb" src="midia/posts/blog-1.jpg" alt="Capa do post">
+                            <div class="blog-card__body">
+                                <h3 class="blog-card__title">Panfletagem com estratégia: como o marketing offline
+                                    continua gerando movimento real no varejo.</h3>
+                                <p class="blog-card__excerpt">
+                                    Descubra como a panfletagem, quando combinada com estratégias de marketing digital,
+                                    pode impulsionar o tráfego e as vendas no varejo. Saiba como criar campanhas
+                                    eficazes que conectam o mundo offline ao online.
+                                </p>
+
+                                <div class="blog-card__meta">
+                                    <time datetime="2026-02-10">10 fev 2026</time>
+                                    <span class="blog-card__tag">Guia</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="blog-card">
+                        <a class="blog-card__link" href="posts/pagina-padrao.html">
+                            <img class="blog-card__thumb" src="midia/posts/blog-1.jpg" alt="Capa do post">
+                            <div class="blog-card__body">
+                                <h3 class="blog-card__title">Panfletagem com estratégia: como o marketing offline
+                                    continua gerando movimento real no varejo.</h3>
+                                <p class="blog-card__excerpt">
+                                    Descubra como a panfletagem, quando combinada com estratégias de marketing digital,
+                                    pode impulsionar o tráfego e as vendas no varejo. Saiba como criar campanhas
+                                    eficazes que conectam o mundo offline ao online.
+                                </p>
+
+                                <div class="blog-card__meta">
+                                    <time datetime="2026-02-10">10 fev 2026</time>
+                                    <span class="blog-card__tag">Guia</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+                Rodapé
+                ========================================================= -->
+    <footer class="rodape">
+        <!-- watermark gigante no fundo -->
+        <img class="rodape-watermark" src="midia/mobi-logo-reduzida.png" alt="" aria-hidden="true">
+
+        <div class="rodape-container">
+            <div class="rodape-col rodape-brand">
+                <!-- logo pequena no topo -->
+                <a href="index.html">
+                    <img src="midia/mobi-logo-reduzida.png" alt="logo mobi comunicação" class="rodape-logo-top">
+                </a>
+
+                <div class="rodape-social">
+                    <a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Whatsapp"><i class="fa fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+
+                <p class="rodape-copy">
+                    © 2026, Todos os direitos reservados. Mobi Comunicação
+                </p>
+            </div>
+
+            <div class="rodape-col">
+                <h4>Sitemap</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#services">Nossos Serviços</a></li>
+                    <li><a href="#clients">Nossos Clientes</a></li>
+                    <li><a href="#quotes">Depoimentos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-col">
+                <h4>Soluções</h4>
+                <ul>
+                    <li><a href="panfletagem.html">Panfletagem Estratégica e Distribuição Inteligente</a></li>
+                    <li><a href="acoes-promocionais.html">Ações Promocionais e Eventos no Ponto de Venda</a></li>
+                    <li><a href="marketing-presenca.html">Marketing de Presença e Ativação de Marca</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape-col">
+                <h4>Informações legais</h4>
+                <ul>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/menu-hamburguer.js"></script>
+    <script>
+        // Header "glass" ao rolar (você já tem isso — mantido)
+        const header = document.querySelector(".header");
+        if (header) {
+            window.addEventListener("scroll", () => {
+                header.classList.toggle("scrolled", window.scrollY > 10);
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#app'),
+            smooth: true,
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/78606a000b.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
