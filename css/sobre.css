@@ -1,0 +1,578 @@
+/* =========================================================
+   RESET BASE LIMPO
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================================
+   Header (menu fixo + efeito vidro no scroll)
+   ========================================================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 60px;
+    /* menor altura */
+    transition: all 0.3s ease;
+
+    & .logo a img {
+        width: 300px;
+        height: auto;
+    }
+
+}
+
+/* ao rolar, aplica vidro */
+.header.scrolled {
+    padding: 6px 60px;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    /* espaÃ§o entre links */
+}
+
+.nav-bar a {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-bar a:hover {
+    transition: 0.2s ease-in-out;
+    font-size: 20px;
+}
+
+/* Esconde o botão hambúrguer no desktop */
+.nav-toggle {
+    display: none;
+}
+
+body {
+    font-family: "Satoshi", sans-serif;
+    background: #0b0706;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "bebas-neue", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+/* =========================================================
+   HERO SOBRE
+   ========================================================= */
+
+.about-hero {
+    padding: 180px 6% 120px;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(255, 115, 0, 0.25), transparent 60%),
+        linear-gradient(180deg, #0b0706 0%, #140903 100%);
+}
+
+.about-tag {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 115, 0, 0.4);
+    background: rgba(255, 115, 0, 0.1);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.95;
+    margin: 20px 0;
+}
+
+.about-hero p {
+    max-width: 60ch;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   FUNDADOR
+   ========================================================= */
+
+.about-founder {
+    background: #ffffff;
+    color: #111;
+    padding: 50px 6%;
+}
+
+.about-founder__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-founder h2 {
+    font-size: 75px;
+    color: #ff7300;
+    margin-bottom: 20px;
+}
+
+.about-founder p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.about-metrics {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about-metrics strong {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ff7300;
+}
+
+.about-founder__image img {
+    width: min(650px, 100%);
+    filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.2));
+}
+
+
+/* =========================================================
+   VALORES
+   ========================================================= */
+
+.about-values {
+    text-align: center;
+    padding: 120px 6%;
+}
+
+.about-values h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.value-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 115, 0, 0.08);
+    border: 1px solid rgba(255, 115, 0, 0.3);
+    transition: 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 45px rgba(255, 115, 0, 0.2);
+}
+
+.value-card h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   CARROSSEL
+   ========================================================= */
+
+.about-carousel {
+    text-align: center;
+    padding: 100px 6%;
+    background: linear-gradient(180deg, #140903 0%, #0b0706 100%);
+}
+
+.about-carousel h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 25s linear infinite;
+}
+
+.carousel img {
+    height: 260px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   CTA FINAL
+   ========================================================= */
+
+.about-cta {
+    padding: 140px 6%;
+    text-align: center;
+}
+
+.about-cta h2 {
+    font-size: 54px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 16px 32px;
+    border-radius: 999px;
+    background: #ff7300;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   Rodapé
+   ========================================================= */
+.rodape {
+    position: relative;
+    overflow: hidden;
+
+    /* mais espaÃ§o inferior para a logo gigante ficar â€œbem abaixoâ€ */
+    padding: 110px 6% 220px;
+    border-top: 1px solid rgba(255, 115, 0, 0.38);
+
+    background:
+        radial-gradient(900px 600px at 20% 50%, rgba(255, 120, 0, 0.18), transparent 60%),
+        radial-gradient(700px 500px at 80% 40%, rgba(255, 80, 0, 0.12), transparent 60%),
+        linear-gradient(180deg, #0e0401 0%, #140601 55%, #0e0401 100%);
+}
+
+.rodape-container {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 80px;
+
+    position: relative;
+    z-index: 2;
+    /* conteÃºdo sempre acima da watermark */
+}
+
+/* logo pequena acima dos Ã­cones */
+.rodape-logo-top {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 24px;
+}
+
+/* redes sociais: igual referÃªncia (quadradinhos discretos) */
+.rodape-social {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.rodape-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+
+    color: rgba(255, 255, 255, 0.92);
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.rodape-social a:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 115, 0, 0.14);
+    border-color: rgba(255, 115, 0, 0.34);
+}
+
+.rodape-copy {
+    font-size: 14px;
+    opacity: 0.65;
+    line-height: 1.6;
+}
+
+/* colunas */
+.rodape-col h4 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 18px;
+}
+
+.rodape-col ul {
+    display: grid;
+    gap: 14px;
+}
+
+.rodape-col a {
+    font-size: 14px;
+    opacity: 0.62;
+    transition: opacity 180ms ease;
+}
+
+.rodape-col a:hover {
+    opacity: 1;
+}
+
+/* ========================
+WATERMARK (logo gigante)
+â€œbem abaixoâ€ do conteÃºdo
+======================== */
+
+.rodape-watermark {
+    position: absolute;
+    left: 50%;
+
+    /* joga a logo bem pra baixo, sem ficar colada no conteÃºdo */
+    bottom: -30px;
+
+    transform: translateX(-50%);
+    width: 1000;
+    height: auto;
+
+    opacity: 0.10;
+    filter: grayscale(100%) contrast(1.05);
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 1024px) {
+    .about-founder__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   TABLET (<= 1024px)
+   ========================= */
+@media (max-width: 1024px) {
+
+    /* HEADER */
+    .header {
+        padding: 18px 24px;
+    }
+
+    .header.scrolled {
+        padding: 10px 24px;
+    }
+
+    .header .logo a img {
+        width: 220px;
+    }
+
+    /* Botão hambúrguer aparece */
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-toggle__bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 999px;
+        position: relative;
+    }
+
+    .nav-toggle__bar+.nav-toggle__bar {
+        margin-top: 6px;
+    }
+
+    /* NAV vira painel */
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100dvh;
+        width: min(420px, 86vw);
+        padding: 96px 22px 22px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+
+        transform: translateX(110%);
+        transition: transform 260ms ease;
+        z-index: 60;
+    }
+
+    .nav-bar a {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .nav-bar a:hover {
+        font-size: 18px;
+    }
+
+    /* Estado aberto do menu (JS aplica .nav-open) */
+    .header.nav-open .nav-bar {
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   MOBILE (<= 600px)
+   ========================= */
+@media (max-width: 600px) {
+
+    /* HEADER */
+    .header {
+        padding: 14px 16px;
+    }
+
+    .header.scrolled {
+        padding: 10px 16px;
+    }
+
+    .header .logo a img {
+        width: 170px;
+    }
+
+    .nav-toggle {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        border: 0.8px solid #F37600;
+
+        & img {
+            width: 22px;
+        }
+    }
+
+    /* NAV painel mais estreito */
+    .nav-bar {
+        width: min(200px, 90vw);
+        padding: 86px 18px 18px;
+    }
+}
+
+@media (max-width: 980px) {
+    .rodape {
+        padding: 90px 6% 200px;
+    }
+
+    .rodape-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+    }
+
+    .rodape-watermark {
+        width: min(1200px, 170vw);
+        bottom: -180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .rodape {
+        padding: 70px 6% 180px;
+    }
+
+    .rodape-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .rodape-watermark {
+        width: min(380px, 220vw);
+        bottom: -10px;
+        opacity: 0.08;
+    }
+}
