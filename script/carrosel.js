@@ -23,6 +23,12 @@
       desc: "estratégias que conectam sua marca com o público de forma memorável",
       img: "midia/servico-marketing-presenca.png",
       cta: "marketing-presenca.html"
+    },
+    {
+      title: "Repositor de Mercadorias e Atendente de Caixa",
+      desc: "estratégias que conectam sua marca com o público de forma memorável",
+      img: "midia/servico-repositor-e-atendente.jpeg",
+      cta: "repositor-atendente.html"
     }
   ];
 
