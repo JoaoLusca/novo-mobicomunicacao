@@ -27,7 +27,7 @@
     {
       title: "Repositor de Mercadorias e Atendente de Caixa",
       desc: "estratégias que conectam sua marca com o público de forma memorável",
-      img: "midia/servico-repositor-e-atendente.jpeg",
+      img: "midia/servico-repositor-e-atendente.jpg",
       cta: "repositor-atendente.html"
     }
   ];

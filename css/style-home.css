@@ -8,7 +8,47 @@
   =============================================================
 */
 
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
 
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #25D366; /* cor padrão WhatsApp */
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 60%;
+    height: auto;
+}
+
+/* Hover (desktop) */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
 /* =========================================================
    Base / Reset
    ========================================================= */
@@ -1154,13 +1194,15 @@ to {
   display: grid;
   grid-template-columns: 1;
 
-  & label,
+  & label
   input,
   textarea {
     display: block;
     width: 100%;
     font-size: 16px;
     margin-bottom: 10px;
+    
+
   }
 
 & input,
@@ -1171,6 +1213,8 @@ textarea {
   margin-bottom: 2rem;
   border: 1px solid transparent;
   border-radius: 20px;
+  
+  color: #000000 !important;
 }
 
 & textarea {

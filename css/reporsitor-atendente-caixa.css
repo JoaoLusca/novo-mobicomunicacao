@@ -5,7 +5,47 @@ CSS exclusivo para páginas de serviço
 Mantém o “DNA” visual da home, mas com layout próprio
 =========================================================
 */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
 
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #25D366; /* cor padrão WhatsApp */
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 60%;
+    height: auto;
+}
+
+/* Hover (desktop) */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
 /* Reset local sem quebrar o global do style-home.css */
 .svc {
   background:
@@ -27,7 +67,7 @@ Mantém o “DNA” visual da home, mas com layout próprio
   background:
     linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.88) 100%),
     radial-gradient(900px 520px at 30% 40%, rgba(255, 115, 0, 0.20), transparent 60%),
-    url("../midia/servico-repositor-e-atendente.jpeg");
+    url("../midia/servico-repositor-e-atendente.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
