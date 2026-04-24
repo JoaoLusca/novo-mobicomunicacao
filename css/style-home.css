@@ -116,6 +116,47 @@ h3, h4 {
   /* importante */
 }
 
+.hero-mute-btn {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.hero-mute-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: #fff;
+}
+
+.hero-mute-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-mute-btn .icon-unmuted {
+  display: none;
+}
+
+.hero-mute-btn.is-unmuted .icon-muted {
+  display: none;
+}
+
+.hero-mute-btn.is-unmuted .icon-unmuted {
+  display: block;
+}
+
 /* container da mÃ­dia */
 
 /* =========================================================

@@ -54,9 +54,21 @@ MOBI Comunicação
     Hero
     ========================================================= -->
   <section id="home" class="hero-section">
-    <video class="hero-video" autoplay loop playsinline preload="metadata">
+    <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="auto">
       <source src="midia/vid/MOBI_2.mp4" type="video/mp4" />
     </video>
+    <button class="hero-mute-btn" id="hero-mute-btn" aria-label="Ativar som">
+      <svg class="icon-muted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <line x1="23" y1="9" x2="17" y2="15"/>
+        <line x1="17" y1="9" x2="23" y2="15"/>
+      </svg>
+      <svg class="icon-unmuted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      </svg>
+    </button>
   </section>
 
 
@@ -365,7 +377,7 @@ MOBI Comunicação
               ========================================================= -->
   <section class="contact-forms" id="contact">
     <div class="forms">
-      <form action="https://formsubmit.co/mobi@gmail.com" method="POST">
+      <form action="https://formsubmit.co/contato@mobicomunicacao.com.br" method="POST">
         <label for="Nome">Nome Completo</label>
         <input type="text" name="name" placeholder="Nome" id="name" required>
         <label for="E-mail">E-mail</label>
@@ -405,9 +417,9 @@ MOBI Comunicação
         </a>
 
         <div class="rodape-social">
-          <a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Whatsapp"><i class="fa fa-whatsapp"></i></a>
-          <a href="#" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          <a href="https://www.instagram.com/mobi.comunicacao/" aria-label="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://wa.me/5551991052994" aria-label="Whatsapp"><i class="fa fa-whatsapp"></i></a>
+                    <a target="_blank" href="contato@mobicomunicacao.com.br" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
         </div>
 
         <p class="rodape-copy">
@@ -477,6 +489,32 @@ MOBI Comunicação
   </script>
   </script>
   <script src="script/menu-hamburguer.js"></script>
+  <script>
+    (function () {
+      var v = document.getElementById('hero-video');
+      var btn = document.getElementById('hero-mute-btn');
+      if (!v) return;
+
+      var p = v.play();
+      if (p !== undefined) {
+        p.catch(function () {
+          var resume = function () {
+            v.play();
+          };
+          document.addEventListener('click', resume, { once: true });
+          document.addEventListener('touchstart', resume, { once: true });
+        });
+      }
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          v.muted = !v.muted;
+          btn.classList.toggle('is-unmuted', !v.muted);
+          btn.setAttribute('aria-label', v.muted ? 'Ativar som' : 'Silenciar');
+        });
+      }
+    })();
+  </script>
 </body>
 
 </html>
